@@ -5,23 +5,36 @@ import { LazyReveal } from "@/components/LazyReveal";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      </div>
 
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      {/* Animated Gradient Orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
 
       {/* Content */}
       <div className="container relative z-10 px-4 md:px-6">
         <div className="flex flex-col items-center space-y-8 text-center">
+          {/* Badge */}
           <LazyReveal delay={0}>
-            <div className="glass-card px-4 py-2 rounded-full shadow-sm">
-              <p className="text-sm font-medium text-foreground">
-                Automated Airdrop Claiming for AsterDex
+            <div className="glass-card px-4 py-2 rounded-full">
+              <p className="text-sm font-medium text-muted-foreground">
+                🚀 Automated Airdrop Claiming for AsterDex
               </p>
             </div>
           </LazyReveal>
 
+          {/* Heading */}
           <LazyReveal delay={100}>
             <div className="space-y-4 max-w-4xl">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
@@ -30,7 +43,7 @@ export const Hero = () => {
                 {" "}Again
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-                AsterDrop monitors the AsterDex ecosystem and automatically claims eligible airdrops on your behalf. Stay secure with non-custodial wallet integration.
+                Automate your AsterDex airdrop claims with AsterDrop. Secure, fast, and effortless token collection.
               </p>
             </div>
           </LazyReveal>

@@ -8,39 +8,34 @@ export const Header = () => {
 
   const navLinks = [
     { name: "Features", href: "#features" },
+    { name: "How It Works", href: "#how-it-works" },
     { name: "Dashboard", href: "#dashboard" },
+    { name: "FAQ", href: "#faq" },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 backdrop-blur-lg shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
           <a href="/" className="flex items-center">
             <img src={logoHeader} alt="AsterDrop" className="h-8 md:h-10" />
           </a>
 
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {link.name}
               </a>
             ))}
           </nav>
 
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Button variant="ghost" size="sm">
               Sign In
@@ -50,6 +45,7 @@ export const Header = () => {
             </Button>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -58,6 +54,7 @@ export const Header = () => {
           </button>
         </div>
 
+        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col gap-4">
@@ -65,8 +62,8 @@ export const Header = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}
                 </a>
