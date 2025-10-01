@@ -27,7 +27,7 @@ const features = [
 
 export const Features = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="features" className="py-24 relative overflow-hidden">
       <div className="container px-4 md:px-6">
         <LazyReveal>
           <div className="text-center space-y-4 mb-16">
@@ -35,7 +35,7 @@ export const Features = () => {
               Why Choose <span className="gradient-text">AsterDrop</span>?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The most advanced airdrop automation tool built for the AsterDex ecosystem
+              A powerful automation tool designed to simplify airdrop claiming for the AsterDex ecosystem
             </p>
           </div>
         </LazyReveal>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Clock, Coins, TrendingUp } from "lucide-react";
+import { CircleCheck as CheckCircle2, Clock, Coins, TrendingUp } from "lucide-react";
 import { toast } from "sonner";
 import { LazyReveal } from "@/components/LazyReveal";
 
@@ -75,7 +75,7 @@ export const ClaimDashboard = () => {
   }, 0);
 
   return (
-    <section className="py-24 relative">
+    <section id="dashboard" className="py-24 relative">
       <div className="container px-4 md:px-6">
         <LazyReveal>
           <div className="text-center space-y-4 mb-16">
@@ -83,12 +83,11 @@ export const ClaimDashboard = () => {
               Your <span className="gradient-text">Airdrop Dashboard</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Track and claim your AsterDex airdrops in one place
+              Connect your wallet to view and manage your AsterDex airdrops
             </p>
           </div>
         </LazyReveal>
 
-        {/* Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <LazyReveal delay={0}>
             <Card className="glass-card border-border h-full">
@@ -108,13 +107,13 @@ export const ClaimDashboard = () => {
           <LazyReveal delay={100}>
             <Card className="glass-card border-border h-full">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Total Claimed</CardTitle>
-                <CheckCircle2 className="h-4 w-4 text-green-500" />
+                <CardTitle className="text-sm font-medium">Automated Claims</CardTitle>
+                <CheckCircle2 className="h-4 w-4 text-primary" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">$500.00</div>
+                <div className="text-2xl font-bold">24/7</div>
                 <p className="text-xs text-muted-foreground">
-                  1 airdrop claimed
+                  Always monitoring
                 </p>
               </CardContent>
             </Card>
@@ -123,13 +122,13 @@ export const ClaimDashboard = () => {
           <LazyReveal delay={200}>
             <Card className="glass-card border-border h-full">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Success Rate</CardTitle>
+                <CardTitle className="text-sm font-medium">Gas Optimization</CardTitle>
                 <TrendingUp className="h-4 w-4 text-primary" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">100%</div>
+                <div className="text-2xl font-bold">Smart</div>
                 <p className="text-xs text-muted-foreground">
-                  All claims successful
+                  Optimal timing
                 </p>
               </CardContent>
             </Card>
