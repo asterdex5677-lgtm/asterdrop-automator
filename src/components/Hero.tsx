@@ -53,22 +53,6 @@ export const Hero = () => {
               Learn More
             </Button>
           </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 pt-12 max-w-3xl w-full">
-            <div className="space-y-2">
-              <p className="text-3xl md:text-4xl font-bold gradient-text">$2.4M+</p>
-              <p className="text-sm text-muted-foreground">Total Claimed</p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-3xl md:text-4xl font-bold gradient-text">12.5K+</p>
-              <p className="text-sm text-muted-foreground">Active Users</p>
-            </div>
-            <div className="space-y-2">
-              <p className="text-3xl md:text-4xl font-bold gradient-text">99.9%</p>
-              <p className="text-sm text-muted-foreground">Success Rate</p>
-            </div>
-          </div>
         </div>
       </div>
 
