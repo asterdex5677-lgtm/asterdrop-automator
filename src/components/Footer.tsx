@@ -1,32 +1,24 @@
 import { Twitter, Github, MessageCircle } from "lucide-react";
 
 export const Footer = () => {
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  };
-
   return (
     <footer className="border-t border-border bg-card/50 backdrop-blur-sm">
       <div className="container px-4 md:px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold gradient-text">AsterDrop</h3>
             <p className="text-sm text-muted-foreground">
-              Simplifying airdrop claims for the AsterDex ecosystem with secure automation.
+              Automate your AsterDex airdrop claims with ease and security.
             </p>
           </div>
 
+          {/* Product */}
           <div className="space-y-4">
             <h4 className="font-semibold">Product</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#features" onClick={(e) => handleSmoothScroll(e, '#features')} className="hover:text-primary transition-colors">Features</a></li>
-              <li><a href="#dashboard" onClick={(e) => handleSmoothScroll(e, '#dashboard')} className="hover:text-primary transition-colors">Dashboard</a></li>
+              <li><a href="#features" className="hover:text-primary transition-colors">Features</a></li>
+              <li><a href="#dashboard" className="hover:text-primary transition-colors">Dashboard</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Documentation</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Pricing</a></li>
             </ul>
