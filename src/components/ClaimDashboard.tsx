@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Clock, Coins, TrendingUp } from "lucide-react";
+import { CircleCheck as CheckCircle2, Clock, Coins, TrendingUp } from "lucide-react";
 import { toast } from "sonner";
 import { LazyReveal } from "@/components/LazyReveal";
 
